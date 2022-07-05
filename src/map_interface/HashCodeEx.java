@@ -18,6 +18,10 @@ public class HashCodeEx {
         Student st4 = new Student("Sever", "Server", 3);
         boolean result = map.containsKey(st4);
         System.out.println(result);
+
+        for (Map.Entry<Student, Double> entry: map.entrySet()){
+            System.out.println(entry.getKey() + ":" + entry.getValue());
+        }
     }
 }
 
@@ -34,7 +38,7 @@ class Student{
 
     @Override
     public String toString() {
-        return "Student{name= " + name + " " + surname + ", course= " + course + "}";
+        return "Student{name = " + name + " " + surname + ", course = " + course + "}";
     }
 
     @Override
