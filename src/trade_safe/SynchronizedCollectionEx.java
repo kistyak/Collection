@@ -11,9 +11,7 @@ public class SynchronizedCollectionEx {
             source.add(i);
         }
         List<Integer> target = Collections.synchronizedList(new ArrayList<>());
-        Runnable runnable = () ->{
-            target.addAll(source);
-        };
+        Runnable runnable = () -> target.addAll(source);
         Thread thread1 = new Thread(runnable);
         Thread thread2 = new Thread(runnable);
         thread1.start();
