@@ -23,7 +23,7 @@ public class StudentInfo {
         info.printStudentMixComdition(arrayList, 20, 8, 'f');
         info.testStudents(arrayList, (Student s) -> {return s.age < 25;});
         System.out.println("-----------------");
-        info.testStudents(arrayList, (Student s) -> {return s.avgRate > 8;});
+        info.testStudents(arrayList, s -> s.avgRate > 8); // короткий вариант записи
         System.out.println("-----------------");
         info.testStudents(arrayList, (Student s) -> {return s.age >18 && s.sex == 'f';});
     }
